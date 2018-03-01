@@ -1,0 +1,243 @@
+body{
+	font-size: 12px;
+	background-color: #f5f5f5;
+}
+#now{
+	width: 100%;
+	height: 13.8rem;
+	background: url('../img/screen.png'),linear-gradient(#3EBDFF,
+		#47E0FF);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom center;
+
+}
+.now_city{
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+	line-height: 1.57rem;
+}
+.now_air{
+	width: 2.1rem;
+	height: 1.26rem;
+	background-color: #F1AB62;
+	margin-left: 0.26rem;
+	margin-top: 0.05rem;
+	border-radius: 0.2rem;
+	text-align: center;
+	padding-top: 0.31rem;
+
+}
+.now_air h1,.now_air h2{
+	font-size: 0.36rem;
+	color: #fff;
+}
+.now_temp{
+	font-size: 0.96rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.77rem;
+	line-height: 0.96rem;
+}
+.now_situation{
+	font-size: 0.51rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.51rem;
+	margin-top: 0.91rem;
+
+}
+.now_wind{
+	font-size: 0.32rem;
+	line-height: 0.32rem;
+	color: #fff;
+	text-align: center;
+	margin-top: 0.53rem;
+}
+
+.now_cue{
+	text-align: center;
+	font-size: 0.32rem;
+	margin-top: 1.46rem;
+	line-height: .32rem;
+	color: #fff;
+}
+#future{
+	width: 100%;
+	height: 3.09rem;
+	background-color: #fff;
+	border-bottom: 0.03rem solid #e4e4e4;
+	padding: .72rem 0;
+}
+.future_box{
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 0 0.58rem;
+	font-size: 0.32rem;
+}
+.tody{
+	border-right: 0.03rem solid #e4e4e4;
+
+}
+.future_top{
+	width: 100%;
+	height: 50%;
+}
+.futuredate{
+	float: left;
+}
+.future_top p{
+	float: right;
+}
+.tody_img,.tomorrow_img{
+	width: 0.72rem;
+	height: 0.72rem;
+	float: right;
+
+}
+#hours{
+	width: 100%;
+	height: 3.9rem;
+	background-color: #fff;
+	border-bottom:0.03rem solid #e4e4e4;
+	border-top:0.03rem solid #e4e4e4;
+	margin-top: 0.3rem;
+	display: flex;/*下面的hours li还没有设置flex-shrink: 0;这块的也没有
+	设置display: flex; 此时复制li，li会竖排，为了让li横排，之前会加浮动
+	但是因为li设置了弹性布局，但凡设置了弹性布局，元素身上的float、clea
+	等的属性将失效。因此此时要把他的父元素也变成一个容器，所以才设置了
+	display: flex;；又因为此时父元素变成了一个容器，因此li会自动缩放大小
+	所以要设置子元素的flex-shrink:1;默认值是1,如果某个项目设置为0，它将
+	不会缩小； */
+	overflow-x: scroll;/* 这个是在X轴加滚动的效果 */
+
+}
+#hours li{
+	width: 2rem;
+	height: 100%;
+	padding:0.94rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-content:space-between;
+	flex-shrink: 0;/* 不变化 */
+
+}
+.hours_img,.weeks_img{
+	width: 1rem;
+	height: 1rem;
+	padding: 0 0.4rem;
+	box-sizing: content-box; /* 此处加padding和box-sizing目的为了让
+	图片恢复到一加padding
+	就变大的效果 */
+}
+.hours_time,.hours_temp,.weeks_date,.weeks_sitiation
+,.weeks_higntemp,.weeks_lowtemp,.weeks_fengxiang,.weeks_level{
+	font-size: 0.26rem;
+}
+#weeks{
+	width: 100%;
+	height: 11.16rem;
+	background-color: #fff;
+	border-top:0.03rem solid #e4e4e4;
+	margin-top: 0.3rem;
+	display: flex;
+	overflow-x: scroll;
+}
+#weeks li{
+	width: 2rem;
+	height: 100%;
+	padding:0.94rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-content:space-between;
+	flex-shrink: 0;
+}
+.weeks_higntemp,.weeks_lowtemp,.weeks_fengxiang{
+	height: 0.8rem;
+	width: 100%;
+	text-align: center;
+}
+#hours::-webkit-scrollbar,#weeks::-webkit-scrollbar{
+	display: none;
+	/* display: block;  */
+	/* opacity，实现元素透明度变到最小，但是实际元素还存在在文档里；
+	而display的设置则是实现元素真正的不见 */
+}
+#citys{
+	/* width: 100vw; */
+	  /* 一屏的高宽 */
+	/* height: 100vh; */
+	background-color:  #F6F6F6;
+/* 	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 999; */
+	flex-direction:column;
+	overflow-y:scroll;
+	/* position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: #F6F6F6;   */
+	/* 这个是撑开一屏大小的第二种办法，绝对定位，定四个点的位置，
+	然后就直接撑开，例如渔网捕鱼 */
+}
+header{
+	width: 100%;
+	height: 1.29rem;
+	background-color: white;
+	padding: 0 0.29rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.search{
+	width: 9.03rem;
+	height: 0.87rem;
+	background-color: #e2e2e2;
+	border: 0;
+	border-radius: 0.2rem;
+	padding-left: 0.2rem;
+	outline: none;
+
+}
+.btn{
+	font-size: 0.42rem;
+	color: #76a9ff;
+}
+.citys_1{
+	width: 100%;
+	padding-top: 0.1rem;
+	padding-left: 0.3rem;
+	font-size:0.45rem;
+	color: #999999;
+	padding-right: 2.74rem;
+	margin-bottom: 0.08rem;
+}
+.citys_1_kuang{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	margin-top: 0.2rem;
+}
+.citys_1_kuang1{
+	background-color: white;
+	width: 2.34rem;
+	height: 0.84rem;
+	border: 0.03rem solid #E0E0E0;
+	text-align: center;
+	line-height: 0.84rem;
+	font-size:0.40rem;
+	color: black;
+	margin-bottom: 0.39rem;
+	border-radius: 0.2rem;
+}
